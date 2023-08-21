@@ -4,10 +4,11 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "npm-run-all -p start:admin start:backend",
-        "start:admin": "cross-env PORT=3000 npm --prefix airbnb-admin start",
+        "start": "npm-run-all -p start:enduser start:admin start:backend",
+        "start:enduser": "cross-env PORT=3002 npm --prefix airbnb-enduser run dev",
+        "start:admin": "cross-env PORT=3000 npm --prefix airbnb-admin run dev",
         "start:backend": "npm --prefix airbnb-services start",
-        "postinstall": "npm i --prefix airbnb-admin && npm i --prefix airbnb-services"
+        "postinstall": "npm i --prefix airbnb-enduser && npm i --prefix airbnb-admin && npm i --prefix airbnb-services"
     },
     "devDependencies": {
         "cross-env": "^7.0.3",
