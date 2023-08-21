@@ -18,7 +18,7 @@ Configuration for the server component can be provided through the use of enviro
 | -------------------- | -------------------------------------------- | ------------------------------------------------------------------- |
 | BCRYPT_SALT          | the string used for hashing                  | [random-string]                                                     |
 | COMPOSE_PROJECT_NAME | the identifier of the service plus prefix    | amp_[service-identifier]                                            |
-| PORT                 | the port on which to run the server          | 3000                                                                |
+| PORT                 | the port on which to run the server          | 3001                                                                |
 | DB_URL               | the connection url for the database          | [db-provider]://[username]:[password]@localhost:[db-port]/[db-name] |
 | DB_PORT              | the port used by the database instance       | [db-provider-port]                                                  |
 | DB_USER              | the username used to connect to the database | [username]                                                          |

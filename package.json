@@ -1,0 +1,29 @@
+{
+    "name": "airbnb",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm-run-all -p start:admin start:backend",
+        "start:admin": "cross-env PORT=3000 npm --prefix airbnb-admin start",
+        "start:backend": "npm --prefix airbnb-services start",
+        "postinstall": "npm i --prefix airbnb-admin && npm i --prefix airbnb-services"
+    },
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "npm-run-all": "^4.1.5"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/trungnqpro/airbnb-services.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/trungnqpro/airbnb-services/issues"
+    },
+    "homepage": "https://github.com/trungnqpro/airbnb-services#readme",
+    "dependencies": {
+        "qs": "^6.11.2"
+    }
+}
